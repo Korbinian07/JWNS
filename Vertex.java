@@ -28,14 +28,14 @@ class Vertex {
 
     }
 
-    public Vertex add(Vertex v2) {
-            return new Vertex (x + v2.x, y + v2.y);
+    public Vertex add(Vertex that) {
+            return new Vertex (x + that.x, y + that.y);
 
     }
 
-    public void addMod(Vertex v2) {
-        x+= v2.x;
-        y+= v2.y;
+    public void addMod(Vertex that) {
+        x+= that.x;
+        y+= that.y;
     }
 
     public void setX(double x){
@@ -62,6 +62,17 @@ class Vertex {
 
         } 
         return false;
+    }
+
+    public Vertex sub(Vertex that) {
+        return new Vertex(x - that.x, y - that.y);
+    }
+
+    public double distance(Vertex that) {
+        double x_diff = that.x - this.x;
+        double y_diff = that.y - this.y;
+        return Math.sqrt(x_diff * x_diff + y_diff * y_diff);
+
     }
 }
 
