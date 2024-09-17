@@ -16,6 +16,7 @@ class Vertex {
         System.out.println(v1.length());
         System.out.println(v2.length());
 
+
     }
 
     public double length() {
@@ -37,4 +38,39 @@ class Vertex {
 
     }
 
+    public Vertex add(Vertex v2) {
+            return new Vertex (x + v2.x, y + v2.y);
+
+    }
+
+    public void addMod(Vertex v2) {
+        x+= v2.x;
+        y+= v2.y;
+    }
+
+    public void setX(double x){
+        this.x = x;
+    }
+    
+    public void setY(double y){
+        this.y = y;
+    }
+    
+    public double getX(){
+        return x;
+    }
+    
+    public double getY(){
+        return y;
+    }
+
+    public boolean equals (Object thatObject) {
+        if (thatObject instanceof Vertex) {
+            that Vertex = (Vertex) thatObject;
+            return this.x == thatObject.x && this.y == thatObject.y;
+
+        } 
+        return false;
+    }
 }
+
