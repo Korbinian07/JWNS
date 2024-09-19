@@ -74,5 +74,10 @@ class Vertex {
         return Math.sqrt(x_diff * x_diff + y_diff * y_diff);
 
     }
+
+    public void normalize() {
+        double factor = this.length();
+        x = x / factor;
+        y = y / factor;
 }
 
