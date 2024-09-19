@@ -6,7 +6,7 @@ public class GeometricObject {
     
     
     public GeometricObject (Vertex pos, double width, double heigth) {
-        
+        this.pos = pos;
         if (width <= 0) {
             this.width = Math.abs(width);
             this.pos.x = this.pos.x - this.width;
@@ -29,4 +29,25 @@ public class GeometricObject {
 
 
     }
+
+    public GeometricObject (double posx, double posy, double width, double heigth) {
+        this(new Vertex(posx, posy), width, heigth);
+
+    }
+
+    public GeometricObject (Vertex pos, double width) {
+        this(pos, width, width);
+
+    }
+
+    public GeometricObject (double width, double heigth) {
+        this(0, 0, width, heigth);
+
+    }
+
+    public GeometricObject () {
+
+        this(10, 10);
+    }
 }
+
