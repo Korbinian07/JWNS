@@ -79,5 +79,6 @@ class Vertex {
         double factor = this.length();
         x = x / factor;
         y = y / factor;
+    }
 }
 
