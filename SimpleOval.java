@@ -15,4 +15,5 @@ public class SimpleOval  extends GeometricObject {
         return "SimpleOval" + super.toString();
     }
 
+
 }
