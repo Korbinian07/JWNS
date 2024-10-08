@@ -4,6 +4,10 @@ public class SimpleTriangle  extends GeometricObject  {
         
     }
 
+    public SimpleTriangle (double x, double y, double width) {
+        super(new Vertex(x, y), width);
+    }
+
     @Override public String toString () {
         return "SimpleTriangle" + super.toString();
     }
