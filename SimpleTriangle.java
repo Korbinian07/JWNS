@@ -1,11 +1,12 @@
-public class SimpleTriangle  extends GeometricObject  {
-    public SimpleTriangle (Vertex pos, double width) {
-        super (pos, width, (Math.sqrt(3) / 2) * width);
+import java.awt.Color;
+;public class SimpleTriangle  extends GeometricObject  {
+    public SimpleTriangle (Vertex pos, double width, Color color) {
+        super (pos, width, (Math.sqrt(3) / 2) * width, color);
         
     }
 
-    public SimpleTriangle (double x, double y, double width) {
-        super(new Vertex(x, y), width);
+    public SimpleTriangle (double x, double y, double width, Color color) {
+        this(new Vertex(x, y), width, new Color (0, 0, 0));
     }
 
     @Override public String toString () {

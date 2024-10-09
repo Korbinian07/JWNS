@@ -12,6 +12,7 @@ public class ShowInFrame {
 
     public static void show (JComponent c)  {
         show ("", c);
+        
     }
     
 }
