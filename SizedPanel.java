@@ -4,11 +4,11 @@ import java.awt.Dimension;
 
 public class SizedPanel extends JPanel {
     int preferredWidth = 300;
-    int preferredHeigth = 400;
+    int preferredHeight = 400;
 
     public SizedPanel(int w, int h) {
         preferredWidth = w;
-        preferredHeigth = h;
+        preferredHeight = h;
     }
 
     public SizedPanel() {
@@ -16,7 +16,7 @@ public class SizedPanel extends JPanel {
 
     @Override
     public Dimension getPreferredSize() {
-        return new Dimension(preferredWidth, preferredHeigth);
+        return new Dimension(preferredWidth, preferredHeight);
 
     }
     

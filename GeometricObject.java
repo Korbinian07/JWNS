@@ -4,10 +4,10 @@ public class GeometricObject {
     
     public Vertex pos;
     public double width;
-    public double heigth;
+    public double height;
     public Color color;
     
-    public GeometricObject (Vertex pos, double width, double heigth, Color color) {
+    public GeometricObject (Vertex pos, double width, double height, Color color) {
         this.pos = pos;
         this.color = color;
 
@@ -19,23 +19,23 @@ public class GeometricObject {
             this.width = width;
         }
 
-        if (heigth <= 0) {
-            this.heigth = Math.abs(heigth);
-            this.pos.y = this.pos.y - this.heigth;
+        if (height <= 0) {
+            this.height = Math.abs(height);
+            this.pos.y = this.pos.y - this.height;
         }
         else {
-            this.heigth = heigth;
+            this.height = height;
         }
         
         this.pos = pos;
         this.width = width;
-        this.heigth = heigth;
+        this.height = height;
 
 
     }
 
-    public GeometricObject (double posx, double posy, double width, double heigth) {
-        this(new Vertex(posx, posy), width, heigth, new Color (0, 0, 0));
+    public GeometricObject (double posx, double posy, double width, double height) {
+        this(new Vertex(posx, posy), width, height, new Color (0, 0, 0));
 
     }
 
@@ -44,8 +44,8 @@ public class GeometricObject {
 
     }
 
-    public GeometricObject (double width, double heigth) {
-        this(0, 0, width, heigth);
+    public GeometricObject (double width, double height) {
+        this(0, 0, width, height);
 
     }
 
@@ -57,16 +57,20 @@ public class GeometricObject {
         this(10, 10);
     }
 
+    public GeometricObject (Vertex pos) {
+        this (pos, 0, 0, new Color (0, 0, 0));
+    }
+
     public double circumference () {
-        return 2 * (heigth + width);
+        return 2 * (height + width);
     }
 
     public double area () {
-        return heigth * width;
+        return height * width;
     }
 
     public boolean contains (Vertex  v) {
-        return v.x >= pos.x && v.x <= pos.x + width && v.y >= pos.y && v.y <= pos.y + heigth;
+        return v.x >= pos.x && v.x <= pos.x + width && v.y >= pos.y && v.y <= pos.y + height;
     }
 
     public boolean isLargerAs (GeometricObject that) {
@@ -90,14 +94,14 @@ public class GeometricObject {
             GeometricObject that = (GeometricObject) thatObject;
             return pos.equals (that.pos) &&
             that.width == this.width &&
-            that.heigth == this.heigth;
+            that.height == this.height;
         }
         return false;
         
     }
 
     public String toString () {
-        return "pos: " + pos + " w: " + width + " h: " + heigth;
+        return "pos: " + pos + " w: " + width + " h: " + height;
     }                                                                                                   
 }                                                                                                                                                                                                                                                                
 

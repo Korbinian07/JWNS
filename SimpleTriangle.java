@@ -18,7 +18,7 @@ import java.awt.Color;
     }   
     
     public double area () {
-        return 1 / 2 * width * heigth;
+        return 1 / 2 * width * height;
     }
 
 }

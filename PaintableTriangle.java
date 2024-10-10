@@ -15,8 +15,24 @@ public class PaintableTriangle extends SimpleTriangle implements Paintable {
 
 
 
-    public void paintTo (java.awt.Graphics g) {
-        g.setColor (color);
-        g.fill ((int)pos.x, (int)pos.x, (int)width);
+    public void paintTo(java.awt.Graphics g) {
+        g.setColor(color);
+        
+        // Berechnung der drei Eckpunkte des Dreiecks
+        int[] xPoints = {
+            (int) pos.x, // Startpunkt
+            (int) (pos.x + width / 2), // Spitze des Dreiecks
+            (int) (pos.x - width / 2)  // Rechter Eckpunkt
+        };
+        
+        int[] yPoints = {
+            (int) pos.y, // Startpunkt
+            (int) (pos.y - Math.sqrt(3) / 2 * width), // Spitze
+            (int) pos.y // Rechter Eckpunkt
+        };
+        
+        // Zeichne das Dreieck
+        g.fillPolygon(xPoints, yPoints, 3);
     }
+    
 }

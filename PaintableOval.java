@@ -1,22 +1,22 @@
 import java.awt.Color;
 public class PaintableOval extends SimpleOval implements Paintable {
     
-    public PaintableOval (Vertex pos, double width, double heigth, Color color) {
-        super (pos, width, heigth, color);
+    public PaintableOval (Vertex pos, double width, double height, Color color) {
+        super (pos, width, height, color);
     }
 
-    public PaintableOval (double x, double y, double width, double heigth, Color color) {
-        this (new Vertex (x, y), width, heigth, color);
+    public PaintableOval (double x, double y, double width, double height, Color color) {
+        this (new Vertex (x, y), width, height, color);
     }
 
-    public PaintableOval (double x, double y, double width, double heigth) {
-        this (new Vertex (x, y), width, heigth, new Color (0, 0, 0));
+    public PaintableOval (double x, double y, double width, double height) {
+        this (new Vertex (x, y), width, height, new Color (0, 0, 0));
     }
 
 
 
     public void paintTo (java.awt.Graphics g) {
         g.setColor (color);
-        g.fillOval ((int)pos.x, (int)pos.x, (int)width, (int)heigth);
+        g.fillOval ((int)pos.x, (int)pos.x, (int)width, (int)height);
     }
 }

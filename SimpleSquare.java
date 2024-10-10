@@ -7,7 +7,7 @@ public class SimpleSquare  extends GeometricObject {
     }
 
     public SimpleSquare (double x, double y, double width, Color color) {
-        this (new Vertex(x, y), width, width, new Color (0, 0, 0));
+        super (new Vertex(x, y), width, width, new Color (0, 0, 0));
     }
 
 
